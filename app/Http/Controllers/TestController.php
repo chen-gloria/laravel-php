@@ -81,4 +81,16 @@ class TestController extends Controller
     {
         //
     }
+
+    public function contact()
+    {
+        return view('contact');
+    }
+
+    public function show_test($name, $id)
+    {
+        // return view('test')->with('whatever', $name);
+
+        return view('test', compact('name', 'id'));
+    }
 }

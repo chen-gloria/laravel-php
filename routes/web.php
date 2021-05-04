@@ -19,6 +19,9 @@ Route::get('/', function () {
 });
 
 Route::get('/test', [TestController::class, 'index']);
-Route::get('/test/{id}', [TestController::class, 'index']);
+// Route::get('/test/{id}', [TestController::class, 'index']);
+Route::get('/contact', [TestController::class, 'contact']);
+Route::get('test/{x}/{y}', [TestController::class, 'show_test']);
 
-Route::resource('tests', TestController::class);
+// Route::resource('tests', TestController::class);
+
