@@ -13,7 +13,7 @@ class TestController extends Controller
      */
     public function index($id = null)
     {
-        return "I love you".$id;
+        return "Index page";
     }
 
     /**
@@ -84,10 +84,12 @@ class TestController extends Controller
 
     public function contact()
     {
-        return view('contact');
+        $people = ['ABC', 'DEF', 'GHD'];
+
+        return view('contact', compact('people'));
     }
 
-    public function show_test($name, $id)
+    public function show_test($id, $name)
     {
         // return view('test')->with('whatever', $name);
 

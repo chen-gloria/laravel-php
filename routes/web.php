@@ -19,9 +19,8 @@ Route::get('/', function () {
 });
 
 Route::get('/test', [TestController::class, 'index']);
-// Route::get('/test/{id}', [TestController::class, 'index']);
 Route::get('/contact', [TestController::class, 'contact']);
-Route::get('test/{x}/{y}', [TestController::class, 'show_test']);
+Route::get('test/{id}/{name}', [TestController::class, 'show_test']); // Doesn't matter what is the name inside {}
 
 // Route::resource('tests', TestController::class);
 
