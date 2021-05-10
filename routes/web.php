@@ -124,8 +124,33 @@ use App\Models\Test;
 //     Test::create(['title'=>"the create method", 'content'=>'WOW I\'m learning a lot']);
 // });
 
-Route::get('/update', function() {
+// Route::get('/update', function() {
 
-    Test::where('id', 1)->where('is_admin', 0)->update(['title'=>'I have changed!!!', 'content'=>'I love yes']);
-    
+//     Test::where('id', 1)->where('is_admin', 0)->update(['title'=>'I have changed!!!', 'content'=>'I love yes']);
+
+// });
+
+// Route::get('/delete', function() {
+
+//     $test = Test::find(1);
+
+//     // hard delete;
+//     $test->delete();
+
+// });
+
+// Route::get('/delete', function() {
+
+//     Test::destroy(4);
+
+// });
+
+// Delete multiple records
+
+Route::get('/delete', function() {
+
+    Test::destroy([5, 6]);
+
+    // Test::where('is_admin', 0)->delete();
+
 });
