@@ -11,4 +11,10 @@ class Test extends Model
 
     protected $table = 'test';
 
+    // allow some data to be inserted to the database
+    protected $fillable = [
+
+        'title',
+        'content'
+    ];
 }

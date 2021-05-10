@@ -108,12 +108,18 @@ use App\Models\Test;
 //     $test->save();
 // });
 
-Route::get('/basicinsert', function() {
+// Route::get('/basicinsert', function() {
 
-    $test = Test::find(1); //Instantiate
+//     $test = Test::find(1); //Instantiate
 
-    $test->title = 'new ORM Title';
-    $test->content = 'New New New content';
+//     $test->title = 'new ORM Title';
+//     $test->content = 'New New New content';
 
-    $test->save();
+//     $test->save();
+// });
+
+Route::get('/create', function(){
+
+    // Test is the model connected with test table
+    Test::create(['title'=>"the create method", 'content'=>'WOW I\'m learning a lot']);
 });
