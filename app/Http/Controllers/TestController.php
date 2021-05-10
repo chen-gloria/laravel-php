@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Test;
 
 class TestController extends Controller
 {
@@ -94,5 +95,11 @@ class TestController extends Controller
         // return view('test')->with('whatever', $name);
 
         return view('test', compact('name', 'id'));
+    }
+
+    public function forceDelete()
+    {
+        $item = Test::where('id', 8);
+        $item->forceDelete();
     }
 }

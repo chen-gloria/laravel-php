@@ -15,8 +15,6 @@ class Test extends Model
     protected $table = 'test';
 
     // The SoftDeletes trait will automatically cast the deleted_at attribute to a DateTime / Carbon instance for you.
-    // Add $dates to database;
-    // protected $dates = ['deleted_at'];
 
     // allow some data to be inserted to the database
     protected $fillable = [

@@ -157,8 +157,10 @@ use App\Models\Test;
 
 // Soft delete
 
-Route::get('/softdelete', function(){
+// Route::get('/softdelete', function(){
 
-    // put a timestamp until I tell you to force delete
-    Test::destroy(7);
-});
+//     // put a timestamp until I tell you to force delete
+//     Test::destroy(7);
+// });
+
+Route::get('/forcedelete', [TestController::class, 'forceDelete']);
