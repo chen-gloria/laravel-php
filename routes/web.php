@@ -118,8 +118,14 @@ use App\Models\Test;
 //     $test->save();
 // });
 
-Route::get('/create', function(){
+// Route::get('/create', function(){
 
-    // Test is the model connected with test table
-    Test::create(['title'=>"the create method", 'content'=>'WOW I\'m learning a lot']);
+//     // Test is the model connected with test table
+//     Test::create(['title'=>"the create method", 'content'=>'WOW I\'m learning a lot']);
+// });
+
+Route::get('/update', function() {
+
+    Test::where('id', 1)->where('is_admin', 0)->update(['title'=>'I have changed!!!', 'content'=>'I love yes']);
+    
 });
