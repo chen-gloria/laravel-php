@@ -147,10 +147,18 @@ use App\Models\Test;
 
 // Delete multiple records
 
-Route::get('/delete', function() {
+// Route::get('/delete', function() {
 
-    Test::destroy([5, 6]);
+//     Test::destroy([5, 6]);
 
-    // Test::where('is_admin', 0)->delete();
+//     // Test::where('is_admin', 0)->delete();
 
+// });
+
+// Soft delete
+
+Route::get('/softdelete', function(){
+
+    // put a timestamp until I tell you to force delete
+    Test::destroy(7);
 });
